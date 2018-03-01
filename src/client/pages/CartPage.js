@@ -1,14 +1,14 @@
 import React from 'react';
 
-const Home = () => {
+const CartPage = () => {
   return (
       <div>
-        <div>I'm the home component</div>
+        <div>I'm the cart page component</div>
         <button onClick={() => console.log('Hi there!')}>Press me!</button>
       </div>
   );
 };
 
 export default {
-  component: Home
+  component: CartPage
 };

@@ -1,11 +1,12 @@
 import axios from 'axios';
+import { FETCH_PRODUCTS } from '../constants/actionTypes';
+import { AWS_SERVER } from '../constants/apiConstants';
 
-export const FETCH_USERS = 'FETCH_USERS';
-export const fetchUsers = () => async dispatch => {
-  const res = await axios.get('https://react-ssr-api.herokuapp.com/users');
+export const fetchProducts = () => async dispatch => {
+  const request = await axios.get(`${AWS_SERVER.url}${AWS_SERVER.endpoints.products}`);
 
   dispatch({
-    type: FETCH_USERS,
-    payload: res
+    type: FETCH_PRODUCTS,
+    payload: request
   });
 };

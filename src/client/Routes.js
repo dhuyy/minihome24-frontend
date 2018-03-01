@@ -1,15 +1,20 @@
 import React from 'react';
-import HomePage from './pages/HomePage';
-import UsersListPage from './pages/UsersListPage';
+import ProductsPage  from './pages/ProductsPage';
+import CartPage from './pages/CartPage';
+import OrdersPage from './pages/OrdersPage';
 
 export default [
   {
-    ...HomePage,
+    ...ProductsPage,
     path: '/',
     exact: true
   },
   {
-    ...UsersListPage,
-    path: '/users',
+    ...CartPage,
+    path: '/cart',
+  },
+  {
+    ...OrdersPage,
+    path: '/orders',
   }
 ]
