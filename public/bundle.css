@@ -1,0 +1,171 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.point-click {
+  width: 25px;
+  height: 25px;
+  background-color: #5353d1;
+  border-radius: 25px;
+  position: absolute;
+  top: 35px;
+  left: 675px;
+  display: block;
+  cursor: pointer;
+}
+
+.point-click.product {
+  top: 20px;
+  left: 180px;
+}
+
+.point-click.cart {
+  top: 422px;
+  left: 945px;
+}
+
+.point-click.coupon {
+  top: -10px;
+  left: 202px;
+}
+
+.main-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-wrapper {
+  position: relative;
+}
+
+.products-wrapper {
+  width: 100%;
+  height: 1220px;
+  display: flex;
+}
+
+.products-content-wrapper {
+  display: flex;
+  width: 770px;
+  flex-direction: column;
+}
+
+.products-wrapper {
+  width: 770px;
+  height: 1120px;
+  display: grid;
+  grid-gap: 30px 24px;
+  grid-template-columns: 230px 230px 230px;
+  grid-template-rows: 305px 305px 305px;
+}
+
+.product-header {
+  width: 738px;
+}
+
+.product-box {
+  width: 230px;
+  height: 305px;
+  flex-direction: column;
+  position: relative;
+}
+
+.product-image {
+  width: 230px;
+  height: 230px;
+}
+
+.product-name {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  margin: 5px 0 0 0;
+}
+
+.product-price {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  color: #4a4848;
+  letter-spacing: 1.5px;
+}
+
+.cart-wrapper {
+  position: relative;
+}
+
+.selected-product-wrapper {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: absolute;
+  width: 640px;
+  height: 190px;
+  top: 229px;
+  right: 48px;
+  display: flex;
+}
+
+.product-picture-name {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.cart-product-price {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  color: #4a4848;
+  letter-spacing: 1.5px;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-product-price > div:first-of-type {
+  text-align: left;
+  font-weight: normal;
+}
+
+.cart-product-price > div:last-of-type {
+  text-align: right;
+}
+
+.product-picture-name p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.product-picture-name img {
+  width: 160px;
+  height: 160px;
+}
+
+.form-coupon {
+  position: absolute;
+  top: 268px;
+  left: 50px;
+}
+
+.form-coupon > input {
+  height: 38px;
+  width: 121px;
+  font-size: 18px;
+  border: 0;
+}
+
+.form-coupon > input:focus {
+  outline: 0;
+}

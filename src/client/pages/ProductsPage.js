@@ -1,26 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchProducts } from "../actions";
+import { fetchProducts, selectProduct } from "../actions";
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Products from '../components/Products';
 
 class ProductsPage extends Component {
   componentDidMount() {
     this.props.fetchProducts();
   }
 
-  renderProducts() {
-    return this.props.products.map(product => {
-      return <li key={product._id}>{product.name}</li>;
-    });
-  }
-
   render() {
     return (
-        <div>
-          Here's a big list of products:
-          <ul>
-            {this.renderProducts()}
-          </ul>
-        </div>
+      <div className="main-wrapper">
+        <Header />
+        <Products products={this.props.products} selectProduct={this.props.selectProduct}/>
+        <Footer />
+      </div>
     );
   }
 }
@@ -37,5 +33,5 @@ function loadData(store) {
 
 export default {
   loadData,
-  component: connect(mapStateToProps, { fetchProducts })(ProductsPage)
+  component: connect(mapStateToProps, { fetchProducts, selectProduct })(ProductsPage)
 };
